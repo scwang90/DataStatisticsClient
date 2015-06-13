@@ -1,5 +1,7 @@
 package com.datastatistics;
 
+import com.andrestrequest.AndRestConfig;
+import com.andrestrequest.http.DefaultResponseHandler;
 import com.datastatistics.kernel.SameNameImpl;
 
 public class ImplFactory {
@@ -23,6 +25,11 @@ public class ImplFactory {
 	}
 	
 	static{
-		
+		AndRestConfig.setPort("9080");
+		AndRestConfig.setIP("222.85.149.6");
+		AndRestConfig.setVersion("DataStatistics");
+		DefaultResponseHandler.RESULT = "result";
+		DefaultResponseHandler.STATUS = "status";
+		DefaultResponseHandler.STATUS_OK = true;
 	}
 }
