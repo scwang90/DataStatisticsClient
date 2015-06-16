@@ -18,3 +18,7 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+#Client数据统计
+-keep class com.datastatistics.model.** {<fields>;}
+
