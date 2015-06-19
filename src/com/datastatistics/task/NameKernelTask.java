@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.os.Message;
 
+import com.andframe.application.AfExceptionHandler;
 import com.andframe.thread.AfTask;
 import com.andrestrequest.util.GsonUtil;
 import com.datastatistics.ImplFactory;
@@ -32,5 +33,11 @@ public class NameKernelTask extends AfTask {
 		SameNameImpl impl = ImplFactory.getSameNameImpl();
 		impl.submit(sameName);
 	}
-
+	
+	@Override
+	protected void onException(Throwable e) {
+		// TODO Auto-generated method stub
+		super.onException(e);
+		AfExceptionHandler.handler(e, "NameKernelTask");
+	}
 }
