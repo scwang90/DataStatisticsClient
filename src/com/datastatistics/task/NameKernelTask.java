@@ -6,7 +6,9 @@ import java.util.List;
 import android.os.Message;
 
 import com.andframe.application.AfExceptionHandler;
+import com.andframe.caches.AfPrivateCaches;
 import com.andframe.thread.AfTask;
+import com.andframe.util.java.AfMD5;
 import com.andrestrequest.util.GsonUtil;
 import com.datastatistics.ImplFactory;
 import com.datastatistics.kernel.SameNameImpl;
@@ -15,23 +17,30 @@ import com.datastatistics.model.SnSameName;
 
 public class NameKernelTask extends AfTask {
 
+	private String md5;
 	private String name;
 	List<CountProvinceEntity> entities = new ArrayList<CountProvinceEntity>();
 
+	AfPrivateCaches caches = AfPrivateCaches.getInstance("sname");
+	
 	public NameKernelTask(String name,List<CountProvinceEntity> entities) {
 		// TODO Auto-generated constructor stub
 		this.name = name;
 		this.entities = entities;
+		this.md5 = AfMD5.getMD5(name+entities.size());
 	}
 
 	@Override
 	protected void onWorking(Message msg) throws Exception {
 		// TODO Auto-generated method stub
-		SnSameName sameName = new SnSameName();
-		sameName.sameName = name;
-		sameName.countProvince = GsonUtil.toJson(entities);
-		SameNameImpl impl = ImplFactory.getSameNameImpl();
-		impl.submit(sameName);
+		if (caches.get(md5, String.class) == null) {
+			SnSameName sameName = new SnSameName();
+			sameName.sameName = name;
+			sameName.countProvince = GsonUtil.toJson(entities);
+			SameNameImpl impl = ImplFactory.getSameNameImpl();
+			impl.submit(sameName);
+			caches.put(md5, md5);
+		}
 	}
 	
 	@Override
