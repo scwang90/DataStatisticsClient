@@ -5,12 +5,10 @@ package com.datastatistics.model;
  * 统计数据库中个省份同名统计实体类
  * 转换Json之后如下
  * [{e:[11,22]},{e:[11,22]},...]
- * @author SCWANG
+ * @author 树朾
  */
 public class CountProvinceEntity {
-	/**
-	 * 长度为2的int数组 第一个int表示省份的Code 第二个表示People人数
-	 */
+	/** 长度为2的int数组 第一个int表示省份的Code 第二个表示People人数 */
 	public int[] e = new int[2];
 	
 	public CountProvinceEntity() {

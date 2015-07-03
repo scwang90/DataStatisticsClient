@@ -6,13 +6,9 @@ package com.datastatistics.model;
  */
 public class SnSameName{
 
-	/**
-	 * 统计名称
-	 */
+	/** 统计名称 */
 	public String sameName;
-	/**
-	 * 各个省份的数量统计，逗号隔开的，int
-	 */
+	/** 各个省份的数量统计，逗号隔开的，int */
 	public String countProvince;
 
 }
