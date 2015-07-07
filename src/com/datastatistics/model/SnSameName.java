@@ -1,14 +1,14 @@
 package com.datastatistics.model;
 
 /**
- * 数据库表sn_same_name
- * @author 树朾
+ * 鏁版嵁搴撹〃sn_same_name
+ * @author 鏍戞溇
  */
 public class SnSameName{
 
-	/** 统计名称 */
+	/** 缁熻鍚嶇О */
 	public String sameName;
-	/** 各个省份的数量统计，逗号隔开的，int */
+	/** 鍚勪釜鐪佷唤鐨勬暟閲忕粺璁★紝閫楀彿闅斿紑鐨勶紝int */
 	public String countProvince;
 
 }

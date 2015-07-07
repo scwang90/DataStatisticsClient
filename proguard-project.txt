@@ -19,6 +19,6 @@
 #   public *;
 #}
 
-#Client数据统计
+#Client鏁版嵁缁熻
 -keep class com.datastatistics.model.** {<fields>;}
 

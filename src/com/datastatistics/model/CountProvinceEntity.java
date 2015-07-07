@@ -2,13 +2,13 @@ package com.datastatistics.model;
 
 
 /**
- * Í³¼ÆÊı¾İ¿âÖĞ¸öÊ¡·İÍ¬ÃûÍ³¼ÆÊµÌåÀà
- * ×ª»»JsonÖ®ºóÈçÏÂ
+ * ç»Ÿè®¡æ•°æ®åº“ä¸­ä¸ªçœä»½åŒåç»Ÿè®¡å®ä½“ç±»
+ * è½¬æ¢Jsonä¹‹åå¦‚ä¸‹
  * [{e:[11,22]},{e:[11,22]},...]
- * @author Ê÷–b
+ * @author æ ‘æœ¾
  */
 public class CountProvinceEntity {
-	/** ³¤¶ÈÎª2µÄintÊı×é µÚÒ»¸öint±íÊ¾Ê¡·İµÄCode µÚ¶ş¸ö±íÊ¾PeopleÈËÊı */
+	/** é•¿åº¦ä¸º2çš„intæ•°ç»„ ç¬¬ä¸€ä¸ªintè¡¨ç¤ºçœä»½çš„Code ç¬¬äºŒä¸ªè¡¨ç¤ºPeopleäººæ•° */
 	public int[] e = new int[2];
 	
 	public CountProvinceEntity() {
