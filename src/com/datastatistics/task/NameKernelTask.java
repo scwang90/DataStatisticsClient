@@ -50,7 +50,7 @@ public class NameKernelTask extends AfTask implements Comparator<CountProvinceEn
 	protected void onException(Throwable e) {
 		// TODO Auto-generated method stub
 		super.onException(e);
-		AfExceptionHandler.handler(e, "NameKernelTask");
+//		AfExceptionHandler.handler(e, "NameKernelTask");
 	}
 
 	@Override
