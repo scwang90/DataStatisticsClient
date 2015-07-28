@@ -15,7 +15,7 @@ buildscript {
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
     compile project(':AndFrame')
-    compile project(':AndRestRequest')
+    compile project(':AndRestful')
     compile project(':AndAdvert')
 }
 
