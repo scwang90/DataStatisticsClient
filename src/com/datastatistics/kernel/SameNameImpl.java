@@ -10,7 +10,7 @@ public class SameNameImpl extends AbstractRequester{
 		// TODO Auto-generated method stub
 		HttpMethod method = HttpMethod.POST;
 		String path = "/SnSameName/Post";
-		requestHandler.doRequest(method, path ,null, name, null);
+		handler.doRequest(method, path ,null, name, null);
 	}
 
 }
