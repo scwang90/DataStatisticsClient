@@ -7,7 +7,6 @@ import java.util.List;
 
 import android.os.Message;
 
-import com.andframe.application.AfExceptionHandler;
 import com.andframe.caches.AfPrivateCaches;
 import com.andframe.thread.AfTask;
 import com.andframe.util.java.AfMD5;
