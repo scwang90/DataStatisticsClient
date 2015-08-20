@@ -10,7 +10,6 @@ import com.datastatistics.task.NameKernelTask;
 public class DataStatisticsImpl extends AbstractRequester{
 
 	public void statistics(String name,List<CountProvinceEntity> entities) {
-		// TODO Auto-generated method stub
 		AfApplication.postTask(new NameKernelTask(name,entities));
 	}
 	

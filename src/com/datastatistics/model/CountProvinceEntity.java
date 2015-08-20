@@ -12,11 +12,9 @@ public class CountProvinceEntity {
 	public int[] e = new int[2];
 	
 	public CountProvinceEntity() {
-		// TODO Auto-generated constructor stub
 	}
 	
 //	public CountProvinceEntity(NameProvince nameProvince) {
-//		// TODO Auto-generated constructor stub
 //		setPoepleCount(nameProvince.People);
 //		setProvinceCode(nameProvince.getProvinceCode());
 //	}
@@ -27,14 +25,12 @@ public class CountProvinceEntity {
 	}
 	
 	public void setPoepleCount(int people) {
-		// TODO Auto-generated method stub
 		if (e != null && e.length > 1) {
 			e[1] = people;
 		}
 	}
 
 	public void setProvinceCode(int code) {
-		// TODO Auto-generated method stub
 		if (e != null && e.length > 0) {
 			e[0] = code;
 		}

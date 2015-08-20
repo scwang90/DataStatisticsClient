@@ -25,7 +25,6 @@ public class NameKernelTask extends AfTask implements Comparator<CountProvinceEn
 	AfPrivateCaches caches = AfPrivateCaches.getInstance("sname");
 	
 	public NameKernelTask(String name,List<CountProvinceEntity> entities) {
-		// TODO Auto-generated constructor stub
 		this.name = name;
 		this.entities = entities;
 		this.md5 = AfMD5.getMD5(name+entities.size());
@@ -33,7 +32,6 @@ public class NameKernelTask extends AfTask implements Comparator<CountProvinceEn
 
 	@Override
 	protected void onWorking(Message msg) throws Exception {
-		// TODO Auto-generated method stub
 		if (caches.get(md5, String.class) == null) {
 			Collections.sort(entities,this);
 			SnSameName sameName = new SnSameName();
@@ -47,14 +45,12 @@ public class NameKernelTask extends AfTask implements Comparator<CountProvinceEn
 	
 	@Override
 	protected void onException(Throwable e) {
-		// TODO Auto-generated method stub
 		super.onException(e);
 //		AfExceptionHandler.handler(e, "NameKernelTask");
 	}
 
 	@Override
 	public int compare(CountProvinceEntity lhs, CountProvinceEntity rhs) {
-		// TODO Auto-generated method stub
 		if (lhs == null || rhs == null) {
 			return 0;
 		}
