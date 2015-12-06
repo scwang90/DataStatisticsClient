@@ -1,6 +1,6 @@
 package com.datastatistics.kernel;
 
-import com.andrestrequest.http.DefaultRequestHandler.HttpMethod;
+import com.andrestrequest.http.api.HttpMethod;
 import com.andrestrequest.impl.AbstractRequester;
 import com.datastatistics.model.SnSameName;
 
