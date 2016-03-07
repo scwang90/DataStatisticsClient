@@ -1,5 +1,5 @@
 /gen
 /bin
 /build
-/DataStatisticsClient.iml
-/SameNameStatistics.iml
+/*.iml
+/*.iml

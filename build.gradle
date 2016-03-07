@@ -14,9 +14,9 @@ apply plugin: 'com.android.library'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
-    compile project(':AndFrame')
-    compile project(':AndRestful')
-    compile project(':AndAdvert')
+    compile project(':andframe')
+    compile project(':andrestful')
+    compile project(':andadvert')
 }
 
 android {
