@@ -31,7 +31,7 @@ public class NameKernelTask extends AfTask implements Comparator<CountProvinceEn
 	}
 
 	@Override
-	protected void onWorking(Message msg) throws Exception {
+	protected void onWorking(/*Message msg*/) throws Exception {
 		if (caches.get(md5, String.class) == null) {
 			Collections.sort(entities,this);
 			SnSameName sameName = new SnSameName();
