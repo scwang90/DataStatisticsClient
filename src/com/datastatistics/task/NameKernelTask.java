@@ -1,20 +1,18 @@
 package com.datastatistics.task;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
-import android.os.Message;
-
 import com.andframe.caches.AfPrivateCaches;
 import com.andframe.thread.AfTask;
 import com.andframe.util.java.AfMD5;
-import com.andrestrequest.util.GsonUtil;
+import com.andrestful.util.GsonUtil;
 import com.datastatistics.ImplFactory;
 import com.datastatistics.kernel.SameNameImpl;
 import com.datastatistics.model.CountProvinceEntity;
 import com.datastatistics.model.SnSameName;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class NameKernelTask extends AfTask implements Comparator<CountProvinceEntity>{
 
@@ -46,7 +44,7 @@ public class NameKernelTask extends AfTask implements Comparator<CountProvinceEn
 	@Override
 	protected void onException(Throwable e) {
 		super.onException(e);
-//		AfExceptionHandler.handler(e, "NameKernelTask");
+//		AfExceptionHandler.handle(e, "NameKernelTask");
 	}
 
 	@Override
@@ -54,6 +52,6 @@ public class NameKernelTask extends AfTask implements Comparator<CountProvinceEn
 		if (lhs == null || rhs == null) {
 			return 0;
 		}
-		return Integer.compare(lhs.getProvinceCode(), rhs.getProvinceCode());
+		return Integer.valueOf(lhs.getProvinceCode()).compareTo(rhs.getProvinceCode());
 	}
 }

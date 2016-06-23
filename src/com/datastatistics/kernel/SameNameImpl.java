@@ -1,15 +1,15 @@
 package com.datastatistics.kernel;
 
-import com.andrestrequest.http.api.HttpMethod;
-import com.andrestrequest.impl.AbstractRequester;
+import com.andrestful.api.AbstractRequester;
+import com.andrestful.api.HttpMethod;
 import com.datastatistics.model.SnSameName;
 
-public class SameNameImpl extends AbstractRequester{
+public class SameNameImpl extends AbstractRequester {
 
 	public void submit(SnSameName name) throws Exception{
 		HttpMethod method = HttpMethod.POST;
 		String path = "/SnSameName/Post";
-		handler.doRequest(method, path ,null, name, null);
+		impl.handler.doRequest(method, path ,null, name, null);
 	}
 
 }
